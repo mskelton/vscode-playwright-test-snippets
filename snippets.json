@@ -1,10 +1,26 @@
 {
   "Playwright describe": {
-    "prefix": "desc",
+    "prefix": "pw-describe",
     "body": ["test.describe('$1', () => {", "\t$0", "})", ""]
   },
   "Playwright test": {
-    "prefix": "test",
+    "prefix": "pw-test",
     "body": ["test('$1', async ({ ${2:page} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright test.use": {
+    "prefix": "pw-use",
+    "body": ["test.use({ $0 })", ""]
+  },
+  "Playwright test.step": {
+    "prefix": "pw-step",
+    "body": ["await test.step('$1', async () => {", "\t$0", "})", ""]
+  },
+  "Playwright beforeEach": {
+    "prefix": "pw-beforeEach",
+    "body": ["test.beforeEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright afterEach": {
+    "prefix": "pw-afterEach",
+    "body": ["test.afterEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
   }
 }
