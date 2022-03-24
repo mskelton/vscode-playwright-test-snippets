@@ -1,0 +1,9 @@
+*
+*/**
+**/.DS_Store
+!static
+!package.json
+!snippets.json
+!README.md
+!CHANGELOG.md
+!LICENSE

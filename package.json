@@ -1,0 +1,43 @@
+{
+  "name": "playwright-snippets",
+  "displayName": "Playwright Test Snippets",
+  "description": "Useful snippets for the Playwright test runner.",
+  "version": "0.0.0-semantically-released",
+  "publisher": "mskelton",
+  "author": "Mark Skelton",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mskelton/vscode-playwright-snippets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mskelton/vscode-playwright-snippets/issues"
+  },
+  "homepage": "https://github.com/mskelton/vscode-playwright-snippets#readme",
+  "license": "ISC",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "snippets",
+    "playwright",
+    "playwright-test"
+  ],
+  "icon": "static/icon.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.2.3",
+    "semantic-release-vsce": "^3.0.1",
+    "vsce": "^1.78.0"
+  }
+}

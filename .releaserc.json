@@ -1,0 +1,15 @@
+{
+  "branches": ["main"],
+  "verifyConditions": ["semantic-release-vsce", "@semantic-release/github"],
+  "prepare": {
+    "path": "semantic-release-vsce",
+    "packageVsix": "mskelton.playwright-snippets.vsix"
+  },
+  "publish": [
+    "semantic-release-vsce",
+    {
+      "path": "@semantic-release/github",
+      "assets": "mskelton.playwright-snippets.vsix"
+    }
+  ]
+}
