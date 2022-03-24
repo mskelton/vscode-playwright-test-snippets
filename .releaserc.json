@@ -3,13 +3,13 @@
   "verifyConditions": ["semantic-release-vsce", "@semantic-release/github"],
   "prepare": {
     "path": "semantic-release-vsce",
-    "packageVsix": "mskelton.playwright-snippets.vsix"
+    "packageVsix": "mskelton.playwright-test-snippets.vsix"
   },
   "publish": [
     "semantic-release-vsce",
     {
       "path": "@semantic-release/github",
-      "assets": "mskelton.playwright-snippets.vsix"
+      "assets": "mskelton.playwright-test-snippets.vsix"
     }
   ]
 }
