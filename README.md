@@ -11,7 +11,9 @@
 
 The following snippets are provided by this package. If you have ideas of other snippets that would be helpful, please [open an issue](https://github.com/mskelton/vscode-playwright-test-snippets/issues/new).
 
-### `pw-describe→`
+### Test blocks
+
+#### `pw-describe`
 
 ```ts
 test.describe('$1', () => {
@@ -19,7 +21,7 @@ test.describe('$1', () => {
 })
 ```
 
-### `pw-test→`
+#### `pw-test`
 
 ```ts
 test('$1', async ({ page }) => {
@@ -27,7 +29,7 @@ test('$1', async ({ page }) => {
 })
 ```
 
-### `pw-beforeEach→`
+#### `pw-beforeEach`
 
 ```ts
 test.beforeEach(async ({ page }) => {
@@ -35,7 +37,7 @@ test.beforeEach(async ({ page }) => {
 })
 ```
 
-### `pw-afterEach→`
+#### `pw-afterEach`
 
 ```ts
 test.afterEach(async ({ page }) => {
@@ -43,7 +45,7 @@ test.afterEach(async ({ page }) => {
 })
 ```
 
-### `pw-beforeAll→`
+#### `pw-beforeAll`
 
 ```ts
 test.beforeAll(async ({ browser }) => {
@@ -51,7 +53,7 @@ test.beforeAll(async ({ browser }) => {
 })
 ```
 
-### `pw-afterAll→`
+#### `pw-afterAll`
 
 ```ts
 test.afterAll(async ({ browser }) => {
@@ -59,7 +61,7 @@ test.afterAll(async ({ browser }) => {
 })
 ```
 
-### `pw-step→`
+#### `pw-step`
 
 ```ts
 await test.step('$1', async () => {
@@ -67,8 +69,37 @@ await test.step('$1', async () => {
 })
 ```
 
-### `pw-use→`
+#### `pw-use`
 
 ```ts
 test.use({ $0 })
+```
+
+### Lariat
+
+[Lariat](https://github.com/Widen/lariat) is a Playwright page object framework that simplifies page object construction. We've included some useful Lariat snippets as part of this extension.
+
+#### `pw-collection`
+
+```ts
+import Collection from 'lariat'
+
+export class MyPage extends Collection {
+  $0
+}
+```
+
+#### `pw-page-object`
+
+```ts
+import { Page } from '@playwright/test'
+import Collection from 'lariat'
+
+export class MyPage extends Collection {
+  constructor(page: Page) {
+    super(page.locator('$1'))
+  }
+
+  $0
+}
 ```

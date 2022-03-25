@@ -1,34 +1,44 @@
 {
-  "Playwright describe": {
+  "Playwright describe block": {
     "prefix": "pw-describe",
     "body": ["test.describe('$1', () => {", "\t$0", "})", ""]
   },
-  "Playwright test": {
+  "Playwright test block": {
     "prefix": "pw-test",
     "body": ["test('$1', async ({ ${2:page} }) => {", "\t$0", "})", ""]
   },
-  "Playwright test.use": {
+  "Playwright test.use block": {
     "prefix": "pw-use",
     "body": ["test.use({ $0 })", ""]
   },
-  "Playwright test.step": {
+  "Playwright test.step block": {
     "prefix": "pw-step",
     "body": ["await test.step('$1', async () => {", "\t$0", "})", ""]
   },
-  "Playwright beforeEach": {
+  "Playwright beforeEach block": {
     "prefix": "pw-beforeEach",
     "body": ["test.beforeEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
   },
-  "Playwright afterEach": {
+  "Playwright afterEach block": {
     "prefix": "pw-afterEach",
     "body": ["test.afterEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
   },
-  "Playwright beforeAll": {
+  "Playwright beforeAll block": {
     "prefix": "pw-beforeAll",
     "body": ["test.beforeAll(async ({ ${1:browser} }) => {", "\t$0", "})", ""]
   },
-  "Playwright afterAll": {
+  "Playwright afterAll block": {
     "prefix": "pw-afterAll",
     "body": ["test.afterAll(async ({ ${1:browser} }) => {", "\t$0", "})", ""]
+  },
+  "Lariat collection": {
+    "prefix": "pw-collection",
+    "body": [
+      "import Collection from \"lariat\"",
+      "",
+      "export class ${TM_FILENAME_BASE/(^|-)([A-z0-9])/${2:/upcase}/g} extends Collection {",
+      "  $0",
+      "}"
+    ]
   }
 }

@@ -30,11 +30,19 @@
     "snippets": [
       {
         "language": "typescript",
-        "path": "./snippets.json"
+        "path": "./snippets/base.json"
       },
       {
         "language": "javascript",
-        "path": "./snippets.json"
+        "path": "./snippets/base.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/ts.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/js.json"
       }
     ]
   },
