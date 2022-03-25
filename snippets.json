@@ -22,5 +22,13 @@
   "Playwright afterEach": {
     "prefix": "pw-afterEach",
     "body": ["test.afterEach(async ({ ${1:page} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright beforeAll": {
+    "prefix": "pw-beforeAll",
+    "body": ["test.beforeAll(async ({ ${1:browser} }) => {", "\t$0", "})", ""]
+  },
+  "Playwright afterAll": {
+    "prefix": "pw-afterAll",
+    "body": ["test.afterAll(async ({ ${1:browser} }) => {", "\t$0", "})", ""]
   }
 }
