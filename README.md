@@ -11,4 +11,64 @@
 
 The following snippets are provided by this package. If you have ideas of other snippets that would be helpful, please [open an issue](https://github.com/mskelton/vscode-playwright-test-snippets/issues/new).
 
-TODO
+### `pw-describe→`
+
+```ts
+test.describe('$1', () => {
+  $0
+})
+```
+
+### `pw-test→`
+
+```ts
+test('$1', async ({ page }) => {
+  $0
+})
+```
+
+### `pw-beforeEach→`
+
+```ts
+test.beforeEach(async ({ page }) => {
+  $0
+})
+```
+
+### `pw-afterEach→`
+
+```ts
+test.afterEach(async ({ page }) => {
+  $0
+})
+```
+
+### `pw-beforeAll→`
+
+```ts
+test.beforeAll(async ({ browser }) => {
+  $0
+})
+```
+
+### `pw-afterAll→`
+
+```ts
+test.afterAll(async ({ browser }) => {
+  $0
+})
+```
+
+### `pw-step→`
+
+```ts
+await test.step('$1', async () => {
+  $0
+})
+```
+
+### `pw-use→`
+
+```ts
+test.use({ $0 })
+```
